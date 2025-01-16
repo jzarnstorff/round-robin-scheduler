@@ -8,6 +8,7 @@
  ********************************************************
  */
 
+#include "scheduler.h"
 #include <stdio.h>
 
 /**
@@ -29,6 +30,7 @@ void idle_task(void) {
 void task_0_handler(void) {
     while (1) {
         printf("This is task 0\r\n");
+        task_delay(125);
     }
 }
 
@@ -40,6 +42,7 @@ void task_0_handler(void) {
 void task_1_handler(void) {
     while (1) {
         printf("This is task 1\r\n");
+        task_delay(250);
     }
 }
 
@@ -51,6 +54,7 @@ void task_1_handler(void) {
 void task_2_handler(void) {
     while (1) {
         printf("This is task 2\r\n");
+        task_delay(500);
     }
 }
 
@@ -62,5 +66,6 @@ void task_2_handler(void) {
 void task_3_handler(void) {
     while (1) {
         printf("This is task 3\r\n");
+        task_delay(1000);
     }
 }
