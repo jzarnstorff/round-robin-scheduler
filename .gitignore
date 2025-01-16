@@ -1,0 +1,6 @@
+*.d
+*.o
+
+.venv/
+build/
+html/
