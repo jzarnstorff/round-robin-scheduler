@@ -54,4 +54,9 @@ typedef struct TCB {
     void (*task_handler)(void); /**< The task's handler function */
 } TCB_Type;
 
+void init_tasks_stack(void);
+void task_delay(uint32_t tick_count);
+void launch_scheduler(uint32_t systick_hz);
+__attribute__((naked)) void init_scheduler_stack(uint32_t scheduler_stack_start);
+
 #endif // __SCHEDULER_H__
